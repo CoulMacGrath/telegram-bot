@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  telegram-bot:
+    container_name: telegram-bot-container
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    command: ["python", "-m", "bot.main"]
+    networks:
+      - default-network
+
+networks:
+  default-network:
+    driver: bridge

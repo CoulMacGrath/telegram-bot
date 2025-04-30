@@ -1,0 +1,5 @@
+# enviroment files
+.env
+
+# Pycache files
+*/__pycache__
