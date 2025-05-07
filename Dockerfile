@@ -22,4 +22,4 @@ RUN if [ ! -f /app/uv.lock ]; then uv sync; else echo "Using existing uv.lock"; 
 
 RUN uv sync
 
-CMD ["python", "-m", "bot.main"]
+CMD ["python", "-m", "main"]

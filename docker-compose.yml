@@ -1,8 +1,8 @@
 version: '3.8'
 
 services:
-  telegram-bot:
-    container_name: telegram-bot-container
+  faqup-bot:
+    container_name: faqup-bot
     build:
       context: .
       dockerfile: Dockerfile
@@ -10,7 +10,6 @@ services:
       - .env
     volumes:
       - .:/app
-    command: ["python", "-m", "bot.main"]
     networks:
       - default-network
 
