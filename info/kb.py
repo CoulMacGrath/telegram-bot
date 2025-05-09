@@ -44,11 +44,35 @@ def create_practice_menu():
     ])
     return keyboard
 
+def create_test_task_menu():
+    keyboard = InlineKeyboardMarkup(inline_keyboard=[
+        [
+            InlineKeyboardButton(text="Сдать тестовое", callback_data='send_test_task'),
+            InlineKeyboardButton(text="Назад", callback_data='practice'),
+        ],
+    ])
+    return keyboard
 
 def create_back_start_menu():
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
         [
             InlineKeyboardButton(text="Назад", callback_data='back_start'),
+        ],
+    ])
+    return keyboard
+
+def create_back_directions_menu():
+    keyboard = InlineKeyboardMarkup(inline_keyboard=[
+        [
+            InlineKeyboardButton(text="Назад", callback_data='directions'),
+        ],
+    ])
+    return keyboard
+
+def create_back_practice_menu():
+    keyboard = InlineKeyboardMarkup(inline_keyboard=[
+        [
+            InlineKeyboardButton(text="Назад", callback_data='practice'),
         ],
     ])
     return keyboard
